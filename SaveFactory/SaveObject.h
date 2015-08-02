@@ -14,5 +14,6 @@
 @protocol SaveObject <NSObject>
 - (void)create;
 - (id)readDataUsingKey:(NSString *)key;
+- (void)removeDataUsingKey:(NSString *)key;
 - (void)writeDataUsingKey:(NSString *)key Value:(id)value;
 @end
