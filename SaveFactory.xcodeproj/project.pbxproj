@@ -19,6 +19,7 @@
 		63E07E671B6CDE570003AFC6 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63E07E661B6CDE570003AFC6 /* data.plist */; };
 		63E07E6A1B6EE65D0003AFC6 /* SaveFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E691B6EE65C0003AFC6 /* SaveFactory.m */; };
 		63E07E6D1B6EE68C0003AFC6 /* SaveUsingRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E6C1B6EE68C0003AFC6 /* SaveUsingRealm.m */; };
+		63E07E701B6FA1700003AFC6 /* SaveUsingCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E6F1B6FA1700003AFC6 /* SaveUsingCoreData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		63E07E691B6EE65C0003AFC6 /* SaveFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveFactory.m; sourceTree = "<group>"; };
 		63E07E6B1B6EE68C0003AFC6 /* SaveUsingRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveUsingRealm.h; sourceTree = "<group>"; };
 		63E07E6C1B6EE68C0003AFC6 /* SaveUsingRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUsingRealm.m; sourceTree = "<group>"; };
+		63E07E6E1B6FA1700003AFC6 /* SaveUsingCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveUsingCoreData.h; sourceTree = "<group>"; };
+		63E07E6F1B6FA1700003AFC6 /* SaveUsingCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUsingCoreData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,12 +143,14 @@
 			isa = PBXGroup;
 			children = (
 				63E07E611B6CDCFF0003AFC6 /* SaveObject.h */,
-				63E07E631B6CDDC70003AFC6 /* SaveUsingPlist.h */,
-				63E07E641B6CDDC70003AFC6 /* SaveUsingPlist.m */,
 				63E07E681B6EE65C0003AFC6 /* SaveFactory.h */,
 				63E07E691B6EE65C0003AFC6 /* SaveFactory.m */,
+				63E07E631B6CDDC70003AFC6 /* SaveUsingPlist.h */,
+				63E07E641B6CDDC70003AFC6 /* SaveUsingPlist.m */,
 				63E07E6B1B6EE68C0003AFC6 /* SaveUsingRealm.h */,
 				63E07E6C1B6EE68C0003AFC6 /* SaveUsingRealm.m */,
+				63E07E6E1B6FA1700003AFC6 /* SaveUsingCoreData.h */,
+				63E07E6F1B6FA1700003AFC6 /* SaveUsingCoreData.m */,
 			);
 			name = Factory;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				63E07E411B6CDCCC0003AFC6 /* SaveFactory.xcdatamodeld in Sources */,
 				63E07E441B6CDCCC0003AFC6 /* ViewController.m in Sources */,
 				63E07E651B6CDDC70003AFC6 /* SaveUsingPlist.m in Sources */,
+				63E07E701B6FA1700003AFC6 /* SaveUsingCoreData.m in Sources */,
 				63E07E3B1B6CDCCC0003AFC6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  SaveUsingRealm.h
+//  SaveUsingCoreData.h
 //  SaveFactory
 //
 //  Created by LeeSangchan on 2015. 8. 3..
@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "SaveObject.h"
 
-@interface SaveUsingRealm : NSObject<SaveObject>
+@interface SaveUsingCoreData : NSObject<SaveObject>
 
 @end
