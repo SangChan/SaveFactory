@@ -20,6 +20,8 @@
 		63E07E6A1B6EE65D0003AFC6 /* SaveFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E691B6EE65C0003AFC6 /* SaveFactory.m */; };
 		63E07E6D1B6EE68C0003AFC6 /* SaveUsingRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E6C1B6EE68C0003AFC6 /* SaveUsingRealm.m */; };
 		63E07E701B6FA1700003AFC6 /* SaveUsingCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E6F1B6FA1700003AFC6 /* SaveUsingCoreData.m */; };
+		63E07E731B704A230003AFC6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E07E721B704A230003AFC6 /* Realm.framework */; };
+		63E07E751B704A390003AFC6 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E07E741B704A390003AFC6 /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		63E07E6C1B6EE68C0003AFC6 /* SaveUsingRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUsingRealm.m; sourceTree = "<group>"; };
 		63E07E6E1B6FA1700003AFC6 /* SaveUsingCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveUsingCoreData.h; sourceTree = "<group>"; };
 		63E07E6F1B6FA1700003AFC6 /* SaveUsingCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUsingCoreData.m; sourceTree = "<group>"; };
+		63E07E721B704A230003AFC6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		63E07E741B704A390003AFC6 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E07E751B704A390003AFC6 /* libc++.dylib in Frameworks */,
+				63E07E731B704A230003AFC6 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +86,7 @@
 		63E07E2C1B6CDCCC0003AFC6 = {
 			isa = PBXGroup;
 			children = (
+				63E07E741B704A390003AFC6 /* libc++.dylib */,
 				63E07E371B6CDCCC0003AFC6 /* SaveFactory */,
 				63E07E541B6CDCCC0003AFC6 /* SaveFactoryTests */,
 				63E07E361B6CDCCC0003AFC6 /* Products */,
@@ -115,6 +122,7 @@
 		63E07E381B6CDCCC0003AFC6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				63E07E711B704A230003AFC6 /* Realm */,
 				63E07E391B6CDCCC0003AFC6 /* Info.plist */,
 				63E07E3A1B6CDCCC0003AFC6 /* main.m */,
 				63E07E661B6CDE570003AFC6 /* data.plist */,
@@ -153,6 +161,14 @@
 				63E07E6F1B6FA1700003AFC6 /* SaveUsingCoreData.m */,
 			);
 			name = Factory;
+			sourceTree = "<group>";
+		};
+		63E07E711B704A230003AFC6 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				63E07E721B704A230003AFC6 /* Realm.framework */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +405,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SaveFactory/Realm",
+				);
 				INFOPLIST_FILE = SaveFactory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -399,6 +419,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SaveFactory/Realm",
+				);
 				INFOPLIST_FILE = SaveFactory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
