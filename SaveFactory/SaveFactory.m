@@ -8,12 +8,20 @@
 
 #import "SaveFactory.h"
 #import "SaveUsingPlist.h"
+#import "SaveUsingCoreData.h"
+#import "SaveUsingRealm.h"
 
 @implementation SaveFactory
 
 +(id<SaveObject>)saveObjectUsingKey:(NSString *)key {
     if ([key isEqualToString:@"plist"]) {
         return [SaveUsingPlist sharedInstance];
+    }
+    else if ([key isEqualToString:@"coredata"]) {
+        return [SaveUsingCoreData sharedInstance];
+    }
+    else if ([key isEqualToString:@"realm"]) {
+        return [SaveUsingRealm sharedInstance];
     }
     return nil;
 }

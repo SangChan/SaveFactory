@@ -11,6 +11,4 @@
 
 @interface SaveUsingPlist : NSObject<SaveObject>
 
-+(instancetype)sharedInstance;
-
 @end

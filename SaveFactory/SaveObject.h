@@ -12,6 +12,7 @@
 
 #endif
 @protocol SaveObject <NSObject>
++ (instancetype)sharedInstance;
 - (void)create;
 - (id)readDataUsingKey:(NSString *)key;
 - (void)removeDataUsingKey:(NSString *)key;

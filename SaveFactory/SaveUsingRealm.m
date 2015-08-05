@@ -21,6 +21,16 @@
 
 @implementation SaveUsingRealm
 
+static SaveUsingRealm *sharedMyObject = nil;
+
++(instancetype)sharedInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedMyObject = [[super alloc] init];
+    });
+    return sharedMyObject;
+}
+
 - (void)create {
 }
 

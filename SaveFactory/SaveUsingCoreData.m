@@ -10,6 +10,16 @@
 
 @implementation SaveUsingCoreData
 
+static SaveUsingCoreData *sharedMyObject = nil;
+
++(instancetype)sharedInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedMyObject = [[super alloc] init];
+    });
+    return sharedMyObject;
+}
+
 - (void)create {
     
 }
