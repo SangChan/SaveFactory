@@ -8,6 +8,16 @@
 
 #import "SaveUsingCoreData.h"
 
+@interface Data : NSManagedObject
+@property (nonatomic, retain) NSString * key;
+@property (nonatomic, retain) id value;
+@end
+
+@implementation Data
+@dynamic key;
+@dynamic value;
+@end
+
 @implementation SaveUsingCoreData
 
 static SaveUsingCoreData *sharedMyObject = nil;
