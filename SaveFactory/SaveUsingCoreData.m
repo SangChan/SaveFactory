@@ -35,13 +35,18 @@ static SaveUsingCoreData *sharedMyObject = nil;
 }
 
 - (id)readDataUsingKey:(NSString *)key {
-    NSManagedObjectContext *context = [self managedObjectContext];
-    NSError *error;
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Data" inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    NSArray *datas = [context executeFetchRequest:fetchRequest error:&error];
-    return datas;
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"Data"];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"key = %@", key];
+    [fetch setPredicate:predicate];
+    NSError *error = nil;
+    NSArray *results = [[self managedObjectContext] executeFetchRequest:fetch error:&error];
+    if(results) {
+        return [results firstObject];
+    } else {
+        NSLog(@"Error: %@", error);
+    }
+    return nil;
 }
 
 - (void)removeDataUsingKey:(NSString *)key {
