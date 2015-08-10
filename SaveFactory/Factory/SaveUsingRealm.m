@@ -11,7 +11,7 @@
 // Data model
 @interface DataForRealm : RLMObject
 @property NSString *key;
-@property id value;
+@property NSString *value;
 @end
 
 // Implementations
@@ -53,7 +53,7 @@ static SaveUsingRealm *sharedMyObject = nil;
     // Create object
     DataForRealm *data = [[DataForRealm alloc]init];
     data.key = key;
-    data.value = value;
+    data.value = @"test";
     
     // Get the default Realm
     RLMRealm *realm = [RLMRealm defaultRealm];

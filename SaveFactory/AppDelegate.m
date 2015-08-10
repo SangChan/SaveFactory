@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    id<SaveObject> saveObject = [SaveFactory saveObjectUsingKey:@"plist"];
+    id<SaveObject> saveObject = [SaveFactory saveObjectUsingKey:@"coredata"];
     [saveObject create];
     [saveObject writeDataUsingKey:@"test" Value:@{@"test":@"test"}];
     NSDictionary *test = [saveObject readDataUsingKey:@"test"];
