@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		636EF1401B783E4900B2814A /* SaveFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 636EF1381B783E4900B2814A /* SaveFactory.m */; };
+		636EF1411B783E4900B2814A /* SaveUsingCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 636EF13B1B783E4900B2814A /* SaveUsingCoreData.m */; };
+		636EF1421B783E4900B2814A /* SaveUsingPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 636EF13D1B783E4900B2814A /* SaveUsingPlist.m */; };
+		636EF1461B783F0100B2814A /* SaveUsingRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 636EF1451B783F0100B2814A /* SaveUsingRealm.m */; };
 		63E07E3B1B6CDCCC0003AFC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E3A1B6CDCCC0003AFC6 /* main.m */; };
 		63E07E3E1B6CDCCC0003AFC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E3D1B6CDCCC0003AFC6 /* AppDelegate.m */; };
 		63E07E411B6CDCCC0003AFC6 /* SaveFactory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E3F1B6CDCCC0003AFC6 /* SaveFactory.xcdatamodeld */; };
@@ -15,11 +19,7 @@
 		63E07E491B6CDCCC0003AFC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63E07E481B6CDCCC0003AFC6 /* Images.xcassets */; };
 		63E07E4C1B6CDCCC0003AFC6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E07E4A1B6CDCCC0003AFC6 /* LaunchScreen.xib */; };
 		63E07E581B6CDCCC0003AFC6 /* SaveFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E571B6CDCCC0003AFC6 /* SaveFactoryTests.m */; };
-		63E07E651B6CDDC70003AFC6 /* SaveUsingPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E641B6CDDC70003AFC6 /* SaveUsingPlist.m */; };
 		63E07E671B6CDE570003AFC6 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63E07E661B6CDE570003AFC6 /* data.plist */; };
-		63E07E6A1B6EE65D0003AFC6 /* SaveFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E691B6EE65C0003AFC6 /* SaveFactory.m */; };
-		63E07E6D1B6EE68C0003AFC6 /* SaveUsingRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E6C1B6EE68C0003AFC6 /* SaveUsingRealm.m */; };
-		63E07E701B6FA1700003AFC6 /* SaveUsingCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E07E6F1B6FA1700003AFC6 /* SaveUsingCoreData.m */; };
 		63E07E731B704A230003AFC6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E07E721B704A230003AFC6 /* Realm.framework */; };
 		63E07E751B704A390003AFC6 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E07E741B704A390003AFC6 /* libc++.dylib */; };
 /* End PBXBuildFile section */
@@ -35,6 +35,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		636EF1371B783E4900B2814A /* SaveFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveFactory.h; sourceTree = "<group>"; };
+		636EF1381B783E4900B2814A /* SaveFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveFactory.m; sourceTree = "<group>"; };
+		636EF1391B783E4900B2814A /* SaveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveObject.h; sourceTree = "<group>"; };
+		636EF13A1B783E4900B2814A /* SaveUsingCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveUsingCoreData.h; sourceTree = "<group>"; };
+		636EF13B1B783E4900B2814A /* SaveUsingCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUsingCoreData.m; sourceTree = "<group>"; };
+		636EF13C1B783E4900B2814A /* SaveUsingPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveUsingPlist.h; sourceTree = "<group>"; };
+		636EF13D1B783E4900B2814A /* SaveUsingPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUsingPlist.m; sourceTree = "<group>"; };
+		636EF1441B783F0100B2814A /* SaveUsingRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveUsingRealm.h; sourceTree = "<group>"; };
+		636EF1451B783F0100B2814A /* SaveUsingRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUsingRealm.m; sourceTree = "<group>"; };
 		63E07E351B6CDCCC0003AFC6 /* SaveFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E07E391B6CDCCC0003AFC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63E07E3A1B6CDCCC0003AFC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,16 +58,7 @@
 		63E07E511B6CDCCC0003AFC6 /* SaveFactoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaveFactoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63E07E561B6CDCCC0003AFC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63E07E571B6CDCCC0003AFC6 /* SaveFactoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveFactoryTests.m; sourceTree = "<group>"; };
-		63E07E611B6CDCFF0003AFC6 /* SaveObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveObject.h; sourceTree = "<group>"; };
-		63E07E631B6CDDC70003AFC6 /* SaveUsingPlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveUsingPlist.h; sourceTree = "<group>"; };
-		63E07E641B6CDDC70003AFC6 /* SaveUsingPlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUsingPlist.m; sourceTree = "<group>"; };
 		63E07E661B6CDE570003AFC6 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
-		63E07E681B6EE65C0003AFC6 /* SaveFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveFactory.h; sourceTree = "<group>"; };
-		63E07E691B6EE65C0003AFC6 /* SaveFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveFactory.m; sourceTree = "<group>"; };
-		63E07E6B1B6EE68C0003AFC6 /* SaveUsingRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveUsingRealm.h; sourceTree = "<group>"; };
-		63E07E6C1B6EE68C0003AFC6 /* SaveUsingRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUsingRealm.m; sourceTree = "<group>"; };
-		63E07E6E1B6FA1700003AFC6 /* SaveUsingCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveUsingCoreData.h; sourceTree = "<group>"; };
-		63E07E6F1B6FA1700003AFC6 /* SaveUsingCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveUsingCoreData.m; sourceTree = "<group>"; };
 		63E07E721B704A230003AFC6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		63E07E741B704A390003AFC6 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -83,10 +83,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		636EF1361B783E4900B2814A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				636EF1371B783E4900B2814A /* SaveFactory.h */,
+				636EF1381B783E4900B2814A /* SaveFactory.m */,
+				636EF1391B783E4900B2814A /* SaveObject.h */,
+				636EF13A1B783E4900B2814A /* SaveUsingCoreData.h */,
+				636EF13B1B783E4900B2814A /* SaveUsingCoreData.m */,
+				636EF13C1B783E4900B2814A /* SaveUsingPlist.h */,
+				636EF13D1B783E4900B2814A /* SaveUsingPlist.m */,
+				636EF1441B783F0100B2814A /* SaveUsingRealm.h */,
+				636EF1451B783F0100B2814A /* SaveUsingRealm.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		63E07E2C1B6CDCCC0003AFC6 = {
 			isa = PBXGroup;
 			children = (
-				63E07E741B704A390003AFC6 /* libc++.dylib */,
 				63E07E371B6CDCCC0003AFC6 /* SaveFactory */,
 				63E07E541B6CDCCC0003AFC6 /* SaveFactoryTests */,
 				63E07E361B6CDCCC0003AFC6 /* Products */,
@@ -105,7 +120,7 @@
 		63E07E371B6CDCCC0003AFC6 /* SaveFactory */ = {
 			isa = PBXGroup;
 			children = (
-				63E07E621B6CDD660003AFC6 /* Factory */,
+				636EF1361B783E4900B2814A /* Factory */,
 				63E07E3C1B6CDCCC0003AFC6 /* AppDelegate.h */,
 				63E07E3D1B6CDCCC0003AFC6 /* AppDelegate.m */,
 				63E07E421B6CDCCC0003AFC6 /* ViewController.h */,
@@ -122,6 +137,7 @@
 		63E07E381B6CDCCC0003AFC6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				63E07E741B704A390003AFC6 /* libc++.dylib */,
 				63E07E711B704A230003AFC6 /* Realm */,
 				63E07E391B6CDCCC0003AFC6 /* Info.plist */,
 				63E07E3A1B6CDCCC0003AFC6 /* main.m */,
@@ -145,22 +161,6 @@
 				63E07E561B6CDCCC0003AFC6 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		63E07E621B6CDD660003AFC6 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				63E07E611B6CDCFF0003AFC6 /* SaveObject.h */,
-				63E07E681B6EE65C0003AFC6 /* SaveFactory.h */,
-				63E07E691B6EE65C0003AFC6 /* SaveFactory.m */,
-				63E07E631B6CDDC70003AFC6 /* SaveUsingPlist.h */,
-				63E07E641B6CDDC70003AFC6 /* SaveUsingPlist.m */,
-				63E07E6B1B6EE68C0003AFC6 /* SaveUsingRealm.h */,
-				63E07E6C1B6EE68C0003AFC6 /* SaveUsingRealm.m */,
-				63E07E6E1B6FA1700003AFC6 /* SaveUsingCoreData.h */,
-				63E07E6F1B6FA1700003AFC6 /* SaveUsingCoreData.m */,
-			);
-			name = Factory;
 			sourceTree = "<group>";
 		};
 		63E07E711B704A230003AFC6 /* Realm */ = {
@@ -272,13 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63E07E6D1B6EE68C0003AFC6 /* SaveUsingRealm.m in Sources */,
+				636EF1421B783E4900B2814A /* SaveUsingPlist.m in Sources */,
+				636EF1461B783F0100B2814A /* SaveUsingRealm.m in Sources */,
 				63E07E3E1B6CDCCC0003AFC6 /* AppDelegate.m in Sources */,
-				63E07E6A1B6EE65D0003AFC6 /* SaveFactory.m in Sources */,
+				636EF1401B783E4900B2814A /* SaveFactory.m in Sources */,
 				63E07E411B6CDCCC0003AFC6 /* SaveFactory.xcdatamodeld in Sources */,
 				63E07E441B6CDCCC0003AFC6 /* ViewController.m in Sources */,
-				63E07E651B6CDDC70003AFC6 /* SaveUsingPlist.m in Sources */,
-				63E07E701B6FA1700003AFC6 /* SaveUsingCoreData.m in Sources */,
+				636EF1411B783E4900B2814A /* SaveUsingCoreData.m in Sources */,
 				63E07E3B1B6CDCCC0003AFC6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -394,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

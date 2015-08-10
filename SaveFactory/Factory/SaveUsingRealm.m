@@ -2,21 +2,20 @@
 //  SaveUsingRealm.m
 //  SaveFactory
 //
-//  Created by LeeSangchan on 2015. 8. 3..
+//  Created by SangChan on 2015. 8. 10..
 //  Copyright (c) 2015년 LeeSangchan. All rights reserved.
 //
 
 #import "SaveUsingRealm.h"
-#import <Realm/Realm.h>
 
 // Data model
-@interface Data : RLMObject
+@interface DataForRealm : RLMObject
 @property NSString *key;
 @property id value;
 @end
 
 // Implementations
-@implementation Data
+@implementation DataForRealm
 @end // none needed
 
 @implementation SaveUsingRealm
@@ -36,13 +35,13 @@ static SaveUsingRealm *sharedMyObject = nil;
 
 - (id)readDataUsingKey:(NSString *)key {
     NSString *query = [NSString stringWithFormat:@"key = '%@'",key];
-    RLMResults *datas = [Data objectsWhere:query];
+    RLMResults *datas = [DataForRealm objectsWhere:query];
     return [datas firstObject];
 }
 
 - (void)removeDataUsingKey:(NSString *)key {
     NSString *query = [NSString stringWithFormat:@"key = '%@'",key];
-    RLMResults *datas = [Data objectsWhere:query];
+    RLMResults *datas = [DataForRealm objectsWhere:query];
     
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
@@ -52,7 +51,7 @@ static SaveUsingRealm *sharedMyObject = nil;
 }
 - (void)writeDataUsingKey:(NSString *)key Value:(id)value {
     // Create object
-    Data *data = [[Data alloc]init];
+    DataForRealm *data = [[DataForRealm alloc]init];
     data.key = key;
     data.value = value;
     

@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "SaveUsingCoreData.h"
+#import "SaveFactory.h"
+#import "SaveUsingPlist.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    SaveUsingPlist *suPlist = [SaveFactory saveObjectUsingKey:@"plist"];
+    [suPlist create];
+    [suPlist writeDataUsingKey:@"test" Value:@{@"test":@"test"}];
+    NSDictionary *test = [suPlist readDataUsingKey:@"test"];
+    NSLog(@"%@",test);
+    
     return YES;
 }
 
@@ -43,7 +51,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     //[self saveContext];
-    [[SaveUsingCoreData sharedInstance] saveContext];
+    //[[SaveUsingCoreData sharedInstance] saveContext];
 }
 
 

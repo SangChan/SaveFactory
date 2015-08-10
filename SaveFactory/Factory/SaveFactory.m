@@ -9,7 +9,6 @@
 #import "SaveFactory.h"
 #import "SaveUsingPlist.h"
 #import "SaveUsingCoreData.h"
-#import "SaveUsingRealm.h"
 
 @implementation SaveFactory
 
@@ -21,7 +20,7 @@
         return [SaveUsingCoreData sharedInstance];
     }
     else if ([key isEqualToString:@"realm"]) {
-        return [SaveUsingRealm sharedInstance];
+        //return [SaveUsingRealm sharedInstance];
     }
     return nil;
 }

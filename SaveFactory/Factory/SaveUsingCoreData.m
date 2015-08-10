@@ -8,12 +8,12 @@
 
 #import "SaveUsingCoreData.h"
 
-@interface Data : NSManagedObject
+@interface DataForCoreData : NSManagedObject
 @property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) id value;
 @end
 
-@implementation Data
+@implementation DataForCoreData
 @dynamic key;
 @dynamic value;
 @end
@@ -54,9 +54,9 @@ static SaveUsingCoreData *sharedMyObject = nil;
 }
 - (void)writeDataUsingKey:(NSString *)key Value:(id)value {
     NSManagedObjectContext *context = [self managedObjectContext];
-    NSManagedObject *wordInfo = [NSEntityDescription insertNewObjectForEntityForName:@"Data" inManagedObjectContext:context];
-    [wordInfo setValue:key forKey:@"key"];
-    [wordInfo setValue:value forKey:@"value"];
+    NSManagedObject *dataInfo = [NSEntityDescription insertNewObjectForEntityForName:@"Data" inManagedObjectContext:context];
+    [dataInfo setValue:key forKey:@"key"];
+    [dataInfo setValue:value forKey:@"value"];
 }
 
 #pragma mark - Core Data stack
