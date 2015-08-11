@@ -42,7 +42,8 @@ static SaveUsingCoreData *sharedMyObject = nil;
     NSError *error = nil;
     NSArray *results = [[self managedObjectContext] executeFetchRequest:fetch error:&error];
     if(results) {
-        return (DataForCoreData *)[results firstObject];
+        DataForCoreData *dataObject = (DataForCoreData *)[results firstObject];
+        return [dataObject value];
     } else {
         NSLog(@"Error: %@", error);
     }

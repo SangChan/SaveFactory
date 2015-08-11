@@ -24,6 +24,10 @@
     id<SaveObject> saveObject = [SaveFactory saveObjectUsingKey:@"coredata"];
     [saveObject create];
     [saveObject writeDataUsingKey:@"test" Value:@{@"test":@"test"}];
+    [saveObject create];
+    [saveObject writeDataUsingKey:@"test1" Value:@{@"test1":@"test2"}];
+    [saveObject create];
+    [saveObject writeDataUsingKey:@"test2" Value:@{@"test2":@"test2"}];
     id test = [saveObject readDataUsingKey:@"test"];
     NSLog(@"%@",test);
     
