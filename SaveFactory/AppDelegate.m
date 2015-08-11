@@ -24,7 +24,7 @@
     id<SaveObject> saveObject = [SaveFactory saveObjectUsingKey:@"coredata"];
     [saveObject create];
     [saveObject writeDataUsingKey:@"test" Value:@{@"test":@"test"}];
-    NSDictionary *test = [saveObject readDataUsingKey:@"test"];
+    id test = [saveObject readDataUsingKey:@"test"];
     NSLog(@"%@",test);
     
     return YES;

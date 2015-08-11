@@ -42,7 +42,7 @@ static SaveUsingCoreData *sharedMyObject = nil;
     NSError *error = nil;
     NSArray *results = [[self managedObjectContext] executeFetchRequest:fetch error:&error];
     if(results) {
-        return [results firstObject];
+        return (DataForCoreData *)[results firstObject];
     } else {
         NSLog(@"Error: %@", error);
     }
@@ -54,9 +54,9 @@ static SaveUsingCoreData *sharedMyObject = nil;
 }
 - (void)writeDataUsingKey:(NSString *)key Value:(id)value {
     NSManagedObjectContext *context = [self managedObjectContext];
-    NSManagedObject *dataInfo = [NSEntityDescription insertNewObjectForEntityForName:@"Data" inManagedObjectContext:context];
-    [dataInfo setValue:key forKey:@"key"];
-    [dataInfo setValue:value forKey:@"value"];
+    DataForCoreData *dataInfo = [NSEntityDescription insertNewObjectForEntityForName:@"Data" inManagedObjectContext:context];
+    [dataInfo setKey:key];
+    [dataInfo setValue:value];
 }
 
 #pragma mark - Core Data stack
