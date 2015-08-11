@@ -25,10 +25,10 @@
     [saveObject create];
     [saveObject writeDataUsingKey:@"test" Value:@{@"test":@"test"}];
     [saveObject create];
-    [saveObject writeDataUsingKey:@"test1" Value:@{@"test1":@"test2"}];
+    [saveObject writeDataUsingKey:@"test1" Value:@{@"test1":@"test1"}];
     [saveObject create];
     [saveObject writeDataUsingKey:@"test2" Value:@{@"test2":@"test2"}];
-    id test = [saveObject readDataUsingKey:@"test"];
+    id test = [saveObject readDataUsingKey:@"test1"];
     NSLog(@"%@",test);
     
     return YES;
