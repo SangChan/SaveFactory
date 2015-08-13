@@ -11,7 +11,7 @@
 // Data model
 @interface DataForRealm : RLMObject
 @property NSString *key;
-@property NSDictionary *value;
+@property NSString *value;
 @end
 
 // Implementations
@@ -36,7 +36,8 @@ static SaveUsingRealm *sharedMyObject = nil;
 - (id)readDataUsingKey:(NSString *)key {
     NSString *query = [NSString stringWithFormat:@"key = '%@'",key];
     RLMResults *datas = [DataForRealm objectsWhere:query];
-    return [datas firstObject];
+    DataForRealm *data = [datas firstObject];
+    return [NSDictionary dictionaryWithObjectsAndKeys:data.value, data.key,nil];
 }
 
 - (void)removeDataUsingKey:(NSString *)key {
@@ -53,7 +54,7 @@ static SaveUsingRealm *sharedMyObject = nil;
     // Create object
     DataForRealm *data = [[DataForRealm alloc]init];
     data.key = key;
-    data.value = [NSDictionary dictionaryWithDictionary:(NSDictionary *)value];
+    data.value = [(NSDictionary *)value objectForKey:key];
     
     // Get the default Realm
     RLMRealm *realm = [RLMRealm defaultRealm];
