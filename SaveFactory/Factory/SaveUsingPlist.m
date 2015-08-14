@@ -20,11 +20,15 @@ static SaveUsingPlist *sharedMyObject = nil;
     return sharedMyObject;
 }
 
-- (void)create {
-    NSError *error;
+- (NSString *)path {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
+    return [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
+}
+
+- (void)create {
+    NSError *error;
+    NSString *path = [self path];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
@@ -37,10 +41,7 @@ static SaveUsingPlist *sharedMyObject = nil;
 
 - (void)writeDataUsingKey:(NSString *)key Value:(id)value {
     @synchronized(self) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *path = [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
-    
+        NSString *path = [self path];
         NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
         [data setObject:value forKey:key];
         [data writeToFile:path atomically:YES];
@@ -49,9 +50,7 @@ static SaveUsingPlist *sharedMyObject = nil;
 
 - (id)readDataUsingKey:(NSString *)key {
     @synchronized(self) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *path = [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
+        NSString *path = [self path];
         NSMutableDictionary *savedStock = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
         return [savedStock objectForKey:key];
     }
@@ -59,9 +58,7 @@ static SaveUsingPlist *sharedMyObject = nil;
 
 - (void)removeDataUsingKey:(NSString *)key {
     @synchronized(self) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *path = [documentsDirectory stringByAppendingPathComponent:@"data.plist"];
+        NSString *path = [self path];
         NSMutableDictionary *savedStock = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
         [savedStock removeObjectForKey:key];
     }
