@@ -10,9 +10,8 @@
 
 @implementation SaveUsingPlist
 
-static SaveUsingPlist *sharedMyObject = nil;
-
 +(instancetype)sharedInstance {
+    static SaveUsingPlist *sharedMyObject = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedMyObject = [[super alloc] init];
